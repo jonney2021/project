@@ -8,14 +8,16 @@ Input: The input to the program consists of the movie name, adult ticket price, 
 Output: See below the Sample run.
  */
 
-import java.util.Scanner;
+
 
 /**
  * @author Yeming Hu
  * @version 1.0
  * @since November 18, 2022
  */
+
 // import java package
+import java.util.Scanner;
 
 // class declaration
 public class MovieTicketSale {
