@@ -6,13 +6,13 @@
 
 /**Algorithm
  * Import Scanner
- * Declare variables as double, int, String data type
+ * Declare variables as double data type
  * Initialize Scanner
  * Prompt user for input of Adult/Child ticket prices/amount sold.
  * calculate amounts of tickets sold, gross amount, amount donated and net total via methods.
  * print out results.*/
 
-import java.util.Scanner; // import scanner
+import java.util.*; // import scanner
 
 public class MovieTicketSaleMat { // Begin class MovieTicketSaleMat
 
@@ -53,10 +53,10 @@ public class MovieTicketSaleMat { // Begin class MovieTicketSaleMat
         // print results
         System.out.println("\nMovie name: " + movieTitle);
         System.out.println("Number of tickets sold: " + array[7]);
-        System.out.println("Gross Amount: " + array[4]);
+        System.out.println(String.format("Gross Amount: $%.2f" , array[4]) + "");
         System.out.println("Percentage of Gross Amount Donated: " + array[5] + "%");
-        System.out.println("Amount Donated: " + array[6]);
-        System.out.println("The Net Sale: " + array[8] +"\n");
+        System.out.println(String.format("Amount Donated: $%.2f" , array[6]) + "");
+        System.out.println(String.format("The Net Sale: $%.2f" , array[8]) +"\n");
         // close scanner
         sc.close();
     }
