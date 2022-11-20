@@ -20,10 +20,11 @@ package Project2;
  *    firstName, lastName, score[];
  * 3. Import objects Scanner inFile and PrintReader outFile;
  * 4. Read student name and test scores using Scanner;
- * 5. Calculate student test score average;
- * 6. Write results using PrintWriter;
- * 7. Close Scanner and PrintWriter;
- * 8. End
+ * 5. Create for loop for array
+ * 6. Calculate student test score average;
+ * 7. Write results using PrintWriter;
+ * 8. Close Scanner and PrintWriter;
+ * 9. End
 */
 
 
@@ -39,6 +40,7 @@ public class StudentGradeAlexandraArray {
         String firstName, lastName;
         double scoreAverage;
         double score[];
+        double scoreSum = 0;
     
 
         // reference variables
@@ -46,24 +48,22 @@ public class StudentGradeAlexandraArray {
         PrintWriter outFile;
 
         // 2. Initialization phase
-        inFile = new Scanner(new FileReader(
-                "C:\\Users\\alexa\\Documents\\School\\2_Programming_1\\Java\\Programming_I_Project_Data_Fall_2022\\Project2\\Data\\testAlexandra.txt"));
-        outFile = new PrintWriter(
-                "C:\\Users\\alexa\\Documents\\School\\2_Programming_1\\Java\\Programming_I_Project_Data_Fall_2022\\Project2\\Data\\testavgarrayAlexandra.txt");
+        inFile = new Scanner(new FileReader("C:\\Users\\alexa\\Documents\\School\\2_Programming_1\\Java\\Programming_I_Project_Data_Fall_2022\\Project2\\Data\\testAlexandra.txt"));
+        outFile = new PrintWriter("C:\\Users\\alexa\\Documents\\School\\2_Programming_1\\Java\\Programming_I_Project_Data_Fall_2022\\Project2\\Data\\testavgAlexandraArray.txt");
 
         // first and last name
         firstName = inFile.next();
         lastName = inFile.next();
-
+        
+        // array
         score = new double[5];
-        score[0] = inFile.nextDouble();
-        score[1] = inFile.nextDouble();
-        score[2] = inFile.nextDouble();
-        score[3] = inFile.nextDouble();
-        score[4] = inFile.nextDouble();
+        for (int counter = 0; counter < score.length; counter++) {
+            score[counter] = inFile.nextDouble();
+            scoreSum += score[counter];
+        }
 
         // 3. Processing phase
-        scoreAverage = (score[0] + score[1] +  score[2] + score[3] + score[4]) / 5;
+        scoreAverage = scoreSum / score.length;
 
         // 4. Termination phase
         outFile.println("Student Name: " + firstName + " " + lastName);
