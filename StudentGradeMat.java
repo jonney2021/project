@@ -10,8 +10,6 @@ public class StudentGradeMat {
 
         Scanner inFile;
         PrintWriter outFile;
-
-
         inFile = new Scanner(new FileReader("C:\\ICA8\\test.txt"));
         outFile = new PrintWriter("C:\\ICA8\\StudentGrade.txt");
 
@@ -27,17 +25,11 @@ public class StudentGradeMat {
         } 
         while (inFile.hasNext());
 
-
         outFile.println("Student Name: " + firstName + " " + lastName);
         outFile.println("Test Scores: " + testScore[0] + " "  + testScore[1] + " " +  testScore[2] + " " +  testScore[3] + " " + testScore[4] + " ");
         outFile.println("Average test score: " + (testScore[0] + testScore[1] + testScore[2] + testScore[3] + testScore[4])/5);
-        
-
        
-
     inFile.close();
     outFile.close();
     }
 }
-
-
