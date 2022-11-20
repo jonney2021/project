@@ -1,4 +1,4 @@
-package project;
+// package project;
 /*
  * ◼ Project-3 Movie Ticket Sale and Donation to Charity (MovieTicketSale.java)
 A movie in a local theater is in great demand. The theater owner has decided to donate to a local charity a portion of the gross amount generated from the movie.
@@ -7,8 +7,6 @@ Note that the decimal numbers are output with two decimal places.
 Input: The input to the program consists of the movie name, adult ticket price, child ticket price, number of adult tickets sold, number of child tickets sold, and percentage of the gross amount to be donated to the charity.
 Output: See below the Sample run.
  */
-
-
 
 /**
  * @author Yeming Hu

@@ -1,4 +1,4 @@
-package project;
+// package project;
 /*
  * ◼ Project-1 Classify Numbers (ClassifyNumbers.java)
 This program reads a given set of integers and then prints the number of odd integers, the number of even integers, and the number of zeros.
