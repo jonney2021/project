@@ -3,8 +3,6 @@
  * @date 19/11/2022
  * @version 1.0
  */
-
-
 import java.util.Scanner;
 
 public class MovieTicketSaleMat {
@@ -44,27 +42,22 @@ public class MovieTicketSaleMat {
 
         sc.close();
     }
-
-
-   
+    
     public static double grossAmount(double a, double b, double c, double d)
     {
         double gross = a * b + c * d;
         return gross;
     }
-
-   
+    
     public static double donateCharity(double a, double b)
     {
         double donate = (b * a);
         return donate;
     }
-
-  
+    
     public static double netSales(double a, double b)
     {
         double sales = a - b;
         return sales;
     }
-    
 }
