@@ -6,15 +6,16 @@
 
 /**Algorithm
  * Import Scanner
- * Declare variables as double data type
+ * Declare variables as double, int and String data type
  * Initialize Scanner
  * Prompt user for input of Adult/Child ticket prices/amount sold.
- * calculate amounts of tickets sold, gross amount, amount donated and net total via methods.
+ * calculate amounts of tickets sold, gross amount, amount donated and net total via 4 methods.
+ * Use array
  * print out results.*/
 
 import java.util.*; // import scanner
 
-public class MovieTicketSaleMat { // Begin class MovieTicketSaleMat
+public class MovieTicketSale { // Begin class MovieTicketSaleMat
 
     public static void main(String args[]) // Begin main method
     {
