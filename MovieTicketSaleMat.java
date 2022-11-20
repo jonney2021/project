@@ -3,61 +3,86 @@
  * @date 19/11/2022
  * @version 1.0
  */
-import java.util.Scanner;
 
-public class MovieTicketSaleMat {
+/**Algorithm
+ * Import Scanner
+ * Declare variables as double, int, String data type
+ * Initialize Scanner
+ * Prompt user for input of Adult/Child ticket prices/amount sold.
+ * calculate amounts of tickets sold, gross amount, amount donated and net total via methods.
+ * print out results.*/
 
-    public static void main(String args[])
+import java.util.Scanner; // import scanner
+
+public class MovieTicketSaleMat { // Begin class MovieTicketSaleMat
+
+    public static void main(String args[]) // Begin main method
     {
-        double adultTicket, adultSold, childTicket, 
-            childSold, grossAmount, percentDonation, 
-            donateCharity, netSale;
+        // declare variables
+        double  adultTicket, childTicket, grossAmount, percentDonation, 
+                donateAmount, netSale;
+        int     adultTicketsSold, childTicketsSold, ticketsSold;
+        String movieTitle = "Dino King: Journey to fire Mountain";
 
+        // Initialize Scanner
         Scanner sc = new Scanner(System.in);
-
+        
+        // Prompt user for input for Adult ticket price
         System.out.print("Enter Adult Ticket Price: ");
         adultTicket = sc.nextDouble();
-
+        // Prompt user for input for Adult tickets sold
         System.out.print("Enter No of Adult Ticket Sold: ");
-        adultSold = sc.nextDouble();
-
+        adultTicketsSold = sc.nextInt();
+        // Prompt user for input for Child ticket price
         System.out.print("Enter Child Ticket Price: ");
         childTicket = sc.nextDouble();
-
+        // Prompt user for input for Child tickets sold
         System.out.print("Enter No of Child Ticket Sold: ");
-        childSold = sc.nextDouble();;
-
+        childTicketsSold = sc.nextInt();
+        // Prompt user for amount for donation in %. 
         System.out.print("Enter No of Percent Donation: ");
         percentDonation = sc.nextDouble();
 
-        grossAmount = grossAmount(adultTicket, adultSold, childTicket, childSold);
-        donateCharity = donateCharity(percentDonation , grossAmount);
-        netSale = netSales(grossAmount, donateCharity);
-
-        System.out.println(" ");
-
-        System.out.println("The Gross Amount is: " + grossAmount);
-        System.out.println("The Donated to the Charity is: " + donateCharity);
-        System.out.println("The Net Sale is: " + netSale +"\n");
-
+        // calculate totals. 
+        ticketsSold = totalTickets(adultTicketsSold,childTicketsSold);
+        grossAmount = grossAmount(adultTicket, adultTicketsSold, childTicket, childTicketsSold);
+        donateAmount = donateCharity(percentDonation , grossAmount);
+        netSale = netSales(grossAmount, donateAmount);
+        // use array
+        double array[] = {adultTicket, adultTicketsSold, childTicket, childTicketsSold, grossAmount, percentDonation, donateAmount, ticketsSold, netSale};
+        // print results
+        System.out.println("\nMovie name: " + movieTitle);
+        System.out.println("Number of tickets sold: " + array[7]);
+        System.out.println("Gross Amount: " + array[4]);
+        System.out.println("Percentage of Gross Amount Donated: " + array[5] + "%");
+        System.out.println("Amount Donated: " + array[6]);
+        System.out.println("The Net Sale: " + array[8] +"\n");
+        // close scanner
         sc.close();
     }
-    
-    public static double grossAmount(double a, double b, double c, double d)
+
+    // method 1 for gross amount
+    static double grossAmount(double a, double b, double c, double d)
     {
         double gross = a * b + c * d;
         return gross;
     }
-    
-    public static double donateCharity(double a, double b)
+    // method 2 for donate amount
+    static double donateCharity(double a, double b)
     {
-        double donate = (b * a);
+        double donate = (b * a ) / 100;
         return donate;
     }
-    
-    public static double netSales(double a, double b)
+    // method 3 for net sales
+    static double netSales(double a, double b)
     {
         double sales = a - b;
+        return sales;
+    }
+    // method 4 for total tickets sold
+    static int totalTickets(int a, int b)
+    {
+        int sales = a+b;
         return sales;
     }
 }
