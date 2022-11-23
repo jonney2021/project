@@ -15,7 +15,7 @@
 
 import java.util.*; // import scanner
 
-public class MovieTicketSale { // Begin class MovieTicketSaleMat
+public class MovieTicketSaleMat { // Begin class MovieTicketSaleMat
 
     public static void main(String args[]) // Begin main method
     {

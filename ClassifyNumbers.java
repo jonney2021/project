@@ -33,13 +33,15 @@ public class ClassifyNumbers {
         evens = 0;
         odds = 0;
         zeros = 0;
+
         // Prompt user to specify how many integers are to be read.
         System.out.print("Please enter the number of integer digits you want to enter: ");
+
         numberToRead = console.nextInt();
         // Store the integers entered by the user into the array.
         array = new int[numberToRead];
         // Prompt the user to enter specific integer values
-        System.out.println("Please enter " + numberToRead + " integers,positive,negative,or zeros:");
+        System.out.println("Please enter " + numberToRead + " integers, positive, negative, or zeros:");
         // Use a for loop to iterate through the array.
         for (counter = 0; counter < array.length; counter++) {
             array[counter] = console.nextInt();
@@ -57,6 +59,7 @@ public class ClassifyNumbers {
                     odds++;
                     break;
             }// end switch block
+
         } // end for loop
 
         // output the information.
@@ -66,6 +69,7 @@ public class ClassifyNumbers {
 
         // close scanner object
         console.close();
+
     }// end method main
 
 }// end class ClassifyNumbers
@@ -86,13 +90,13 @@ public class ClassifyNumbers {
  * (array[counter]).
  * Step 10: Use switch statement to decide whether number is odd or even or
  * zero.
- * Setp 11: If array[counter] % 2 ==0, the value of evens is incremented by 1.
+ * Step 11: If array[counter] % 2 ==0, the value of evens is incremented by 1.
  * Step 12: Then if array[counter] == 0, the value of zeros is incremented by 1.
  * Step 13: If array[counter] % 2 == -1, indicates that this integer is an odd
  * number that is negative,
  * the value of odds is incremented by 1.
  * Step 14: If array[counter] % 2 == 1, indicates that this integer is an odd
- * number that is postive.
+ * number that is positive.
  * Step 15: Output the result information.
  * Step 16: Close the scanner object.
  * Step 17: End.
